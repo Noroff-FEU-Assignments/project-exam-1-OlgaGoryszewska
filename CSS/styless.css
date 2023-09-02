@@ -1,19 +1,53 @@
 :root {
     --beige: #E1D5C7;
+    --black:#30302F;
 
+
+}
+
+@font-face {
+    font-family:'Urbanist', sans-serif; ;
+    src: url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
 }
 
 body{
-    color: beige;
+    color:var(--beige);
+}
+
+.logo-img{
+    width: 140px;
+    
 
 }
 
-html{
-    color: beige;
+.hamburger{
+    color: var(--black);
+
+}
+.menu-link {
+    color: var(--black);
+    font-family: 'Urbanist';
+    text-decoration: none;
+
 
 }
 
-footer{
-    color: #FF6534;
+.top-menu{
+    display: none;
 
 }
+
+.menu{
+    display: none;
+
+}
+
+#checkbox{
+    display: none;
+}
+
+#checkbox:checked ~ .menu {
+    display: flex;
+
+   
+  }  

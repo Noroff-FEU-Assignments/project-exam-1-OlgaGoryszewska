@@ -5,13 +5,20 @@
 
 }
 
+
 @font-face {
     font-family:'Urbanist', sans-serif; ;
     src: url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
 }
 
+
+html{
+    margin: auto;
+}
+
 body{
     color:var(--beige);
+    margin: auto;
 }
 
 .logo-img{
@@ -19,7 +26,6 @@ body{
     align-self: center;
 
 }
-
 
 .hamburger{
     color: var(--black);
@@ -32,7 +38,8 @@ body{
     color: var(--black);
     font-family: 'Urbanist';
     text-decoration: none;
-
+    padding-top: 4rem;
+    padding:1.5rem;
 
 }
 
@@ -43,6 +50,7 @@ body{
 
 .menu{
     display: none;
+    background-color: var(--beige);
 
 }
 
@@ -55,7 +63,6 @@ body{
     flex-direction: column;
     position: absolute;
     align-self: flex-end;
-    gap: 1rem;
 
    
   }  

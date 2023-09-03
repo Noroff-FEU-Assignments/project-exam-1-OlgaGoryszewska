@@ -1,6 +1,8 @@
 :root {
     --black:#30302F;
     --beige:#E1D5C7;
+    --grey:#F8F8F8;
+
 
 
 }
@@ -51,6 +53,7 @@ body{
 .menu{
     display: none;
     background-color: var(--beige);
+    padding: 2rem;
 
 }
 
@@ -71,6 +74,14 @@ body{
     display: flex;
     flex-direction: column;
     background-color: var(--beige);
+
+   
+  }  
+
+  footer{
+    background-color:var(--grey);
+    display: flex;
+    flex-direction: column;
 
    
   }  

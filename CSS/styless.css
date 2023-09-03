@@ -1,6 +1,6 @@
 :root {
-    --beige: #E1D5C7;
     --black:#30302F;
+    --beige:#E1D5C7;
 
 
 }
@@ -16,12 +16,16 @@ body{
 
 .logo-img{
     width: 140px;
-    
+    align-self: center;
 
 }
 
+
 .hamburger{
     color: var(--black);
+    align-self: flex-end;
+    padding: 1rem;
+
 
 }
 .menu-link {
@@ -48,6 +52,18 @@ body{
 
 #checkbox:checked ~ .menu {
     display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-self: flex-end;
+    gap: 1rem;
+
+   
+  }  
+
+  header{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--beige);
 
    
   }  

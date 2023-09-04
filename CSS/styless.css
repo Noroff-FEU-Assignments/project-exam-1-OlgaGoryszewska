@@ -23,9 +23,17 @@ body{
     margin: auto;
 }
 
+a{
+    font-family:'Urbanist';
+    color: var(--black);
+    text-decoration: none;
+}
+
+
 .logo-img{
     width: 140px;
     align-self: center;
+    padding-bottom: 0.3rem;
 
 }
 
@@ -37,9 +45,7 @@ body{
 
 }
 .menu-link {
-    color: var(--black);
-    font-family: 'Urbanist';
-    text-decoration: none;
+   
     padding-top: 4rem;
     padding:1.5rem;
 
@@ -78,6 +84,8 @@ body{
    
   }  
 
+   /* footer */ 
+
   footer{
     background-color:var(--grey);
     display: flex;
@@ -85,3 +93,17 @@ body{
 
    
   }  
+
+  .logo-footer{
+   width: 40px;
+   padding: 2rem;
+   align-self: center;
+   
+  }  
+
+.link-footer{
+    align-self: center;
+    padding: 0.5rem;
+    font-size: 12px;
+    
+   } 

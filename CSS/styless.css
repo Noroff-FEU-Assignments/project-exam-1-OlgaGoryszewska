@@ -9,8 +9,13 @@
 
 
 @font-face {
-    font-family:'Urbanist', sans-serif; ;
+    font-family:'Urbanist', sans-serif; 
     src: url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
+}
+
+@font-face {
+    font-family: 'Playfair Display SC', serif;
+    src: url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
 }
 
 
@@ -23,11 +28,14 @@ body{
     margin: auto;
 }
 
+p,
 a{
     font-family:'Urbanist';
     color: var(--black);
     text-decoration: none;
 }
+
+
 
 
 .logo-img{
@@ -72,11 +80,12 @@ a{
     flex-direction: column;
     position: absolute;
     align-self: flex-end;
+    z-index: 1;
 
    
   }  
 
-  header{
+header{
     display: flex;
     flex-direction: column;
     background-color: var(--beige);
@@ -84,9 +93,58 @@ a{
    
   }  
 
+main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+    }  
+
+.main-img-div{
+    position: relative;
+
+    }  
+
+.main-img{
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+
+
+   
+  }  
+
+.under-text-overlay,
+.text-overlay{
+  color: #FFF;
+  text-align: center;
+  font-family: Playfair Display SC;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  top: 55%;
+  position: absolute;
+  padding: 0.4rem;
+  
+}  
+
+.under-text-overlay{
+    font-size: 24px;
+    font-style:italic;
+    font-weight: 200;
+    top: 80%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    
+  }  
+
    /* footer */ 
 
-  footer{
+footer{
     background-color:var(--grey);
     display: flex;
     flex-direction: column;
@@ -94,7 +152,7 @@ a{
    
   }  
 
-  .logo-footer{
+.logo-footer{
    width: 40px;
    padding: 2rem;
    align-self: center;

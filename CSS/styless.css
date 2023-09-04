@@ -48,7 +48,8 @@ a{
 .hamburger{
     color: var(--black);
     align-self: flex-end;
-    padding: 1rem;
+    padding: 2rem;
+    padding-bottom: 1rem;
 
 
 }
@@ -129,6 +130,8 @@ main{
   top: 55%;
   position: absolute;
   padding: 0.4rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
   
 }  
 
@@ -137,8 +140,6 @@ main{
     font-style:italic;
     font-weight: 200;
     top: 80%;
-    padding-right: 2rem;
-    padding-left: 2rem;
     
   }  
 
@@ -158,10 +159,16 @@ footer{
    align-self: center;
    
   }  
-
+.coptrights,
 .link-footer{
     align-self: center;
     padding: 0.5rem;
     font-size: 12px;
+    
+   } 
+.coptrights{
+
+    font-size: 10px;
+    padding-top: 2rem;
     
    } 

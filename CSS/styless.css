@@ -241,8 +241,18 @@ footer{
 } 
 
 div.product > *{
-   align-self: center;
    min-width: 100vp;
+   display: flex;
+   flex-direction: column;
+   
    
 
 } 
+
+.product{
+   display: flex;
+   flex-direction: column;
+    
+    
+ 
+ } 

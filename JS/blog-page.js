@@ -21,6 +21,18 @@ function createProductHTML(product) {
     title.innerText = product.title.rendered;
     productContainer.appendChild(title);
 
+
+    const productImage = product._embedded["wp:featuredmedia"][0];
+    const img = document.createElement("img");
+    img.src = productImage.source_url;
+    img.alt = productImage.alt_text;
+    img.style.minWidth =" 200px";
+    img.style.height = "248px";
+    img.style.objectFit ="cover";
+    img.style.display ="flex";
+    productContainer.appendChild(img);
+
+
     const content = document.createElement("div");
     const contentText = product.content.rendered;
     const words = contentText.split (' ');
@@ -28,15 +40,15 @@ function createProductHTML(product) {
     content.innerHTML = truncatedContent;
     productContainer.appendChild(content);
 
-    const productImage = product._embedded["wp:featuredmedia"][0];
-    const img = document.createElement("img");
-    img.src = productImage.source_url;
-    img.alt = productImage.alt_text;
-    img.style.width =" 330px";
-    img.style.height = "248px";
-    img.style.objectFit ="cover";
+    const readMoreLink = document.createElement("a");
+    readMoreLink.href = `blog-specific-page.html?id=${product.id}`;
+    readMoreLink.innerText = "Read More";
+    readMoreLink.style.textDecoration ="underline";
+    readMoreLink.style.fontWeight ="bold";
+    productContainer.appendChild(readMoreLink);
+
+
     
-    productContainer.appendChild(img);
 
     if(product.images && Array.isArray(product.images)){
 
@@ -53,6 +65,7 @@ function createProductHTML(product) {
 
     return productContainer;
 }
+
 
 function redirectToProductDetailPage(productId) {
     window.location.href = `blog-specific-page.html?id=${productId}`;

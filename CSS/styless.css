@@ -225,10 +225,12 @@ footer{
 
 .blog-page-container{
     background-color: var(--white);
-    padding: 1.25rem;
+    margin: 2rem;
+    padding: 1.2rem;
     display: flex;
     flex-direction: column;
     align-content: center;
+    width: 100vp;
 
 } 
 

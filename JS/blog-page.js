@@ -13,7 +13,7 @@ function createProductHTML(product) {
     productContainer.id = product.id;
 
     const title = document.createElement("h2");
-    title.innerText = product.name;
+    title.innerText = product.title.rendered;
     productContainer.appendChild(title);
 
     if(product.images && Array.isArray(product.images)){

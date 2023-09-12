@@ -109,6 +109,7 @@ main{
     display: flex;
     flex-direction: column;
     background-color: var(--grey);
+   
 
 
     }  
@@ -159,6 +160,7 @@ footer{
     background-color:var(--grey);
     display: flex;
     flex-direction: column;
+    
 
    
   }  

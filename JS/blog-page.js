@@ -1,10 +1,13 @@
 const apiBase = "https://public-api.wordpress.com/wp/v2/sites/semester69.wordpress.com/posts?_embed";
 
+
+// Fetching REST API
 async function getProducts() {
     const response = await fetch(apiBase);
     const products = await response.json();
     return products;
 }
+
 
 function createProductHTML(product) {
     const container = document.querySelector(".container");
@@ -18,9 +21,11 @@ function createProductHTML(product) {
     productContainer.appendChild(title);
 
     const content = document.createElement("div");
-    content.innerHTML = product.content.rendered;
+    const contentText = product.content.rendered;
+    const words = contentText.split (' ');
+    const truncatedContent = words.slice(0,50).join (' ');
+    content.innerHTML = truncatedContent;
     productContainer.appendChild(content);
-
 
     const productImage = product._embedded["wp:featuredmedia"][0];
     const img = document.createElement("img");
@@ -30,9 +35,6 @@ function createProductHTML(product) {
     img.style.height = "248px";
     img.style.objectFit ="cover";
     productContainer.appendChild(img);
-    
-
-
 
     if(product.images && Array.isArray(product.images)){
 

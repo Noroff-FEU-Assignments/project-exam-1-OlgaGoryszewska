@@ -28,6 +28,7 @@ html{
 body{
     color:var(--beige);
     margin: auto;
+    min-height: 100dvh;
 }
 
 h1,
@@ -38,6 +39,7 @@ h3{
     font-family:'Urbanist';
     color: var(--black);
     text-decoration: none;
+    
     
 }
 
@@ -161,15 +163,12 @@ main{
     
   }  
 
-   /* footer */ 
+
 
 footer{
     background-color:var(--grey);
     display: flex;
     flex-direction: column;
-    
-
-   
   }  
 
 .logo-footer{

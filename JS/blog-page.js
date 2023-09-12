@@ -1,5 +1,8 @@
 const apiBase = "https://public-api.wordpress.com/wp/v2/sites/semester69.wordpress.com/posts?_embed";
-
+let currentPage = 1;
+const postsPerPage =10;
+const container = document.querySelector(".blog-page-container");
+const loadMoreButton =document.getElementById ("load-more");
 
 // Fetching REST API
 async function getProducts() {
@@ -45,6 +48,7 @@ function createProductHTML(product) {
     readMoreLink.innerText = "Read More";
     readMoreLink.style.textDecoration ="underline";
     readMoreLink.style.fontWeight ="bold";
+    readMoreLink.style.paddingBottom= "2rem";
     productContainer.appendChild(readMoreLink);
 
 
@@ -85,8 +89,46 @@ async function createProductsHTML() {
     }
 }
 
+
+async function getMorePosts(page) {
+    const response =await fetch (`${apiBase}&page=${page}`);
+    const products = await response.json();
+    return products;
+}
+
+function createPostsHTML(products){
+    for (const product of products){
+        const productContainer = createProductHTML (product);
+        container.appendChild(productContainer);
+    }
+}
+
+async function loadMorePosts() {
+    currentPage++;
+    const morePosts = await getMorePosts(currentPage);
+    createPostsHTML(morePosts);
+
+    if (Array.isArray(morePosts)){
+        createPostsHTML(morePosts);
+
+        if(morePosts.length ===0){
+            loadMore.style.display ="none";
+
+    }
+
+    }else{
+        console.error("Error loading more posts:",morePosts);
+    }
+}
+
+
+loadMoreButton.addEventListener("click",loadMorePosts);
+
+
 async function main() {
     await createProductsHTML();
 }
 
+
 main();
+

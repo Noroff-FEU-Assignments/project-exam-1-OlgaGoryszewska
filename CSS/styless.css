@@ -256,3 +256,15 @@ div.product > *{
     
  
  } 
+
+ #load-more{
+    text-decoration: underline;
+    font-weight: bold;
+    border: none;
+    font-family: 'Urbanist';
+    background-color:var(--white);
+    padding: 1rem;
+
+
+  
+  } 

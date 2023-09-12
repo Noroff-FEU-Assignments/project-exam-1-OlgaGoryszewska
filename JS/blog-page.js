@@ -1,4 +1,4 @@
-const apiBase = "https://public-api.wordpress.com/wp/v2/sites/semester69.wordpress.com/posts";
+const apiBase = "https://public-api.wordpress.com/wp/v2/sites/semester69.wordpress.com/posts?_embed";
 
 async function getProducts() {
     const response = await fetch(apiBase);
@@ -15,6 +15,15 @@ function createProductHTML(product) {
     const title = document.createElement("h2");
     title.innerText = product.title.rendered;
     productContainer.appendChild(title);
+
+    const productImage = product._embedded["wp:featuredmedia"][0];
+    const img = document.createElement("img");
+    img.src = productImage.source_url;
+    img.alt = productImage.alt_text;
+    productContainer.appendChild(img);
+    
+
+
 
     if(product.images && Array.isArray(product.images)){
 

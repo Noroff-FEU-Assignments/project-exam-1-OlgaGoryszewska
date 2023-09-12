@@ -242,6 +242,7 @@ footer{
 
 .product{
    align-self: center;
+   min-width: 100vp;
    
 
 } 

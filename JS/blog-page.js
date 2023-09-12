@@ -12,14 +12,23 @@ function createProductHTML(product) {
     productContainer.classList.add("product");
     productContainer.id = product.id;
 
+
     const title = document.createElement("h2");
     title.innerText = product.title.rendered;
     productContainer.appendChild(title);
+
+    const content = document.createElement("div");
+    content.innerHTML = product.content.rendered;
+    productContainer.appendChild(content);
+
 
     const productImage = product._embedded["wp:featuredmedia"][0];
     const img = document.createElement("img");
     img.src = productImage.source_url;
     img.alt = productImage.alt_text;
+    img.style.width =" 330px";
+    img.style.height = "248px";
+    img.style.objectFit ="cover";
     productContainer.appendChild(img);
     
 

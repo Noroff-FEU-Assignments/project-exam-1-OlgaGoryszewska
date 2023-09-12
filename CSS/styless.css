@@ -236,7 +236,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 100vp;
+    min-width: 100vp;
 
 } 
 

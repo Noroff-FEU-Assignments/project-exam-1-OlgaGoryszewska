@@ -1,15 +1,14 @@
-const apiBase = "https://public-api.wordpress.com/wp/v2/sites/semester69.wordpress.com/posts";
-const carouselWrapper= document.querySelector(".wrapper-carousel");
-const previewButton= document.querySelector(".preview-button");
-const nextButton= document.querySelector(".next-button");
+'use strict'
 
-let currentIndex = 0;
+
+const apiBase = "https://public-api.wordpress.com/wp/v2/sites/semester69.wordpress.com/posts";
+
 
  async function fetchPosts(){
     try {
     const response = await fetch(apiBase);
     if (!response.ok){
-        throw new Error ('HTTP error! Status: ${response.status');
+        throw new Error ('HTTP error! Status: ${response.status}');
     }
     const posts = await response.json();
     return posts;
@@ -19,12 +18,11 @@ let currentIndex = 0;
     }   
 }
 fetchPosts()
-    .then(posts => {
-      console.log("Latest Posts:", posts);
-    })
-    .catch(error => {
-    });
+.then((posts) => {
+    console.log("Latest posts:", posts);
 
-
-
+})
+.catch((error) => {
+    console.error("Error in fetchPosts:", error);
+});
 

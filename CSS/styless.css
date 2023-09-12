@@ -32,7 +32,9 @@ body{
 
 h1,
 p,
-a{
+a,
+h2,
+h3{
     font-family:'Urbanist';
     color: var(--black);
     text-decoration: none;
@@ -42,6 +44,11 @@ a{
 h1{
     font-size: 16px;
     padding-top: 2rem;
+    padding: 2rem;
+}
+
+h2{
+   font-weight: 600;
 }
 
 

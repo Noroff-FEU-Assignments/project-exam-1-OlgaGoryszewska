@@ -2,7 +2,7 @@
     --black:#30302F;
     --beige:#E1D5C7;
     --grey:#F8F8F8;
-    --white:
+    --white:#FFF;
 
 
 
@@ -36,7 +36,7 @@ a{
     font-family:'Urbanist';
     color: var(--black);
     text-decoration: none;
-    padding-left: 1.5rem;
+    
 }
 
 h1{
@@ -221,4 +221,19 @@ footer{
 .next-button{
     right:0;
   
+} 
+
+.blog-page-container{
+    background-color: var(--white);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+} 
+
+.product{
+   align-self: center;
+   
+
 } 

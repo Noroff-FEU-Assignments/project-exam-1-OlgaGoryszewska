@@ -10,11 +10,11 @@ async function getProducts() {
 
 
 function createProductHTML(product) {
-    const container = document.querySelector(".container");
+    const container = document.querySelector(".blog-page-container");
     const productContainer = document.createElement("div");
     productContainer.classList.add("product");
     productContainer.id = product.id;
-
+    
 
     const title = document.createElement("h2");
     title.innerText = product.title.rendered;
@@ -34,6 +34,7 @@ function createProductHTML(product) {
     img.style.width =" 330px";
     img.style.height = "248px";
     img.style.objectFit ="cover";
+    
     productContainer.appendChild(img);
 
     if(product.images && Array.isArray(product.images)){
@@ -58,7 +59,7 @@ function redirectToProductDetailPage(productId) {
 
 async function createProductsHTML() {
     const products = await getProducts();
-    const container = document.querySelector(".container");
+    const container = document.querySelector(".blog-page-container");
 
     for (const product of products) {
         const productContainer = createProductHTML(product);

@@ -11,6 +11,7 @@ async function getProducts() {
 
 function createProductHTML(product) {
     const container = document.querySelector(".blog-page-container");
+
     const productContainer = document.createElement("div");
     productContainer.classList.add("product");
     productContainer.id = product.id;

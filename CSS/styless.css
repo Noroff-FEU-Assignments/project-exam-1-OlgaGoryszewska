@@ -240,7 +240,7 @@ footer{
 
 } 
 
-.product{
+div.product > *{
    align-self: center;
    min-width: 100vp;
    

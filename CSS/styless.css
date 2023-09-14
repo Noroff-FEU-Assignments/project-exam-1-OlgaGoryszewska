@@ -4,9 +4,6 @@
     --grey:#F8F8F8;
     --white:#FFF;
 
-
-
-
 }
 
 
@@ -229,6 +226,7 @@ footer{
   
 } 
 
+.blog-specific-page-container,
 .blog-page-container{
     background-color: var(--white);
     margin: 2rem;
@@ -244,8 +242,6 @@ div.product > *{
    min-width: 100vp;
    display: flex;
    flex-direction: column;
-   
-   
 
 } 
 
@@ -253,8 +249,6 @@ div.product > *{
    display: flex;
    flex-direction: column;
     
-    
- 
  } 
 
  #load-more{

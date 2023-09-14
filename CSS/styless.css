@@ -43,7 +43,9 @@ h3{
 h1{
     font-size: 16px;
     padding-top: 2rem;
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 0rem;
+
 }
 
 h2{

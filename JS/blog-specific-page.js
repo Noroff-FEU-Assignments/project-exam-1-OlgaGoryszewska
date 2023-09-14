@@ -24,7 +24,8 @@ async function getBlogPost() {
     
         const title = document.createElement("h1");
         title.innerText = post.title.rendered;
-        title.style.fontSize ="18px";
+        title.style.fontSize ="24px";
+        title.style.fontStyle ="Semi Bold";
         title.style.paddingLeft = "0rem";
         blogContainer.appendChild(title);
 

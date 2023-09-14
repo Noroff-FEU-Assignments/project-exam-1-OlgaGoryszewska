@@ -56,9 +56,13 @@ h2{
 
 
 .logo-img{
-    width: 140px;
+    position: absolute;
+    top: 0.4rem;
+    width: 100px;
     align-self: center;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.4rem;
+    z-index: 2;
+
 
 }
 
@@ -107,6 +111,8 @@ header{
     display: flex;
     flex-direction: column;
     background-color: var(--beige);
+    position:relative;
+    height: 100px;
 
    
   }  

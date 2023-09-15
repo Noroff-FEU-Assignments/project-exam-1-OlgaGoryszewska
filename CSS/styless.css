@@ -234,6 +234,8 @@ footer{
   
 } 
 
+.background-img,
+.contact-form-container,
 .blog-specific-page-container,
 .blog-page-container{
     background-color: var(--white);
@@ -244,7 +246,27 @@ footer{
     align-content: center;
     min-width: 100vp;
 
+
 } 
+
+.background-img{
+    background-image: url('../IMG/main-img.jpg');
+
+}
+
+.contact-form-container{
+    background-color: var(--grey);
+    margin: 0rem;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    min-width: 100vp;
+
+
+} 
+
+
 
 div.product > *{
    min-width: 100vp;

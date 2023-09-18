@@ -71,6 +71,8 @@ function createProductHTML(product) {
 }
 
 
+
+
 function redirectToProductDetailPage(productId) {
     window.location.href = `blog-specific-page.html?id=${productId}`;
 }
@@ -89,6 +91,7 @@ async function createProductsHTML() {
     }
 }
 
+// Get more posts button
 
 async function getMorePosts(page) {
     const response =await fetch (`${apiBase}&page=${page}`);

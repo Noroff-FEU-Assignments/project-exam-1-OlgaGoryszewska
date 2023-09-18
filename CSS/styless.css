@@ -196,43 +196,6 @@ footer{
     
    } 
 
-.container-carousel{
-    position: relative;
-    overflow: hidden;
-    width:100%;
-
-} 
-.wrapper-carousel{
-    display: flex;
-    transition:transform 0.3s ease-in-out;
-
-} 
-
-.slide-carousel{
-    flex: 0 0 100%;
-    padding: 20px;
-    width: 298px;
-    height: 668px;
-    flex-shrink: 0;
-    margin-right: 10px;
-    background-color: #FFF;
-} 
-
-.preview-button,
-.next-button{
-    z-index: 1;
-    top:50%;
-    position: absolute;
-} 
-
-.preview-button{
-    left:0;
-  
-} 
-.next-button{
-    right:0;
-  
-} 
 
 .background-img,
 .contact-form-container,
@@ -240,7 +203,7 @@ footer{
 .blog-page-container{
     background-color: var(--white);
     margin: 2rem;
-    padding: 1.2rem;
+    padding: 0.5rem;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -251,6 +214,7 @@ footer{
 
 .background-img{
     background-image: url('../IMG/main-img.jpg');
+    margin: 3rem;
 
 }
 
@@ -289,6 +253,65 @@ div.product > *{
     background-color:var(--white);
     padding: 1rem;
 
-
-  
   } 
+
+
+/* Last post carousel*/
+
+.last-posts-main-wrapper{
+    width: 100%;
+    max-width: 500px;
+
+}
+
+.slider-wrapper{
+    width: 100%;
+
+}
+
+.last-post-container{
+    width: 100%;
+
+}
+
+.last-posts-button-wrapper{
+
+}
+
+
+.main-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+
+}
+
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    width: 298px;
+    height: 500px;
+    border-radius: 25px;
+    align-self: center;
+    justify-content: center;
+    background-color: white;
+    margin-top: 5rem;
+   
+
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding:1rem;
+    width: 250px;
+    height: 450px;
+
+
+}

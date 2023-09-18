@@ -293,8 +293,8 @@ div.product > *{
     display: flex;
     flex-direction: column;
     box-shadow: 0px 4px 4px 0px #00000040;
-    width: 298px;
-    height: 500px;
+    width: 200px;
+    height: 300px;
     border-radius: 25px;
     align-self: center;
     justify-content: center;

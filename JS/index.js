@@ -42,8 +42,8 @@ async function renderPosts() {
             const img = document.createElement('img');
             img.src = featuredMedia.source_url;
             img.alt = featuredMedia.alt_text || '';
-            img.style.minWidth = '200px';
-            img.style.height = '248px';
+            img.style.minWidth = '100px';
+            img.style.height = '100px';
             img.style.objectFit = 'cover';
             img.style.display = 'flex';
             postElement.appendChild(img);

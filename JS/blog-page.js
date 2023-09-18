@@ -33,6 +33,7 @@ function createProductHTML(product) {
     img.style.height = "248px";
     img.style.objectFit ="cover";
     img.style.display ="flex";
+    img.style.paddingBottom ="1rem";
     productContainer.appendChild(img);
 
 

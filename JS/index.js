@@ -27,6 +27,7 @@ async function renderPosts() {
   try {
     const posts = await getPosts();
     const postContainers = document.querySelectorAll('.card');
+    
 
     // Loop through each container and add the latest post to it
     postContainers.forEach((container, index) => {
@@ -34,6 +35,8 @@ async function renderPosts() {
         const post = posts[index];
         const postElement = document.createElement('div');
         postElement.classList.add('card-container');
+        
+
 
         // Check if a featured image is available in the post
         if (post._embedded && post._embedded['wp:featuredmedia']) {
@@ -43,9 +46,10 @@ async function renderPosts() {
             img.src = featuredMedia.source_url;
             img.alt = featuredMedia.alt_text || '';
             img.style.minWidth = '100px';
-            img.style.height = '100px';
+            img.style.height = '150px';
             img.style.objectFit = 'cover';
             img.style.display = 'flex';
+            img.style.paddingTop ="1rem";
             postElement.appendChild(img);
           }
         }

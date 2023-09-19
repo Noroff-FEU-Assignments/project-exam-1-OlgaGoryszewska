@@ -65,5 +65,51 @@ async function renderPosts() {
   }
 }
 
-// Call the renderPosts function to display the posts
+
 renderPosts();
+
+// Carousel
+
+const slides = document.querySelectorAll('.card');
+const sliderWrapper = document.querySelector('.slider-wrapper');
+
+const leftBtn = document.querySelector('#left-btn');
+const rightBtn =document.querySelector('#right-btn');
+
+let width = sliderWrapper.clientWidth;
+let activeIdxSlide = 0;
+
+slides.forEach((slide, idx) => {
+  slide.style.transform = `translateX(${idx * width + 'px'})`;
+
+});
+
+function showSlide(){
+  slides.forEach((slide, idx) => {
+    slide.style.transform = `translateX(${(idx - activeIdxSlide) * width + 'px'})`;
+  
+  });
+}
+
+leftBtn.addEventListener('click', () => {
+  activeIdxSlide--;
+  if(activeIdxSlide < 0){
+    activeIdxSlide = 0;
+  }
+  
+  showSlide();
+  
+
+});
+
+rightBtn.addEventListener('click', () => {
+  activeIdxSlide++;
+  if(activeIdxSlide > slides.length - 1){
+    activeIdxSlide = slides.length - 1;
+  }
+  showSlide();
+
+});
+
+
+

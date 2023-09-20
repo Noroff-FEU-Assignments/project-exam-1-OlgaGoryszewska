@@ -302,9 +302,9 @@ div.product > *{
     background-color: white;
     margin-top: 5rem;
     justify-content: flex-start; 
-    transition: transform 50ms ease-in ;
+    transition: transform 100ms ease-in ;
     transform: translateX(0);
-    margin: 2rem;
+    margin: 1rem;
    
     
 
@@ -340,5 +340,6 @@ div.card p {
     height: 2rem;
     border-color: var(--black) 1px;
     background-color: transparent;
+    margin: 1rem;
 }
 

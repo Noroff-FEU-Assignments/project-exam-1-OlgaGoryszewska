@@ -83,7 +83,7 @@ let activeIdxSlide = 0;
 
 function showSlide() {
   slides.forEach((slide, idx) => {
-    slide.style.transform = `translateX(${(idx - activeIdxSlide) * 100}%)`
+    slide.style.transform = `translateX(${(idx - activeIdxSlide) * 50}%)`
 
   });
 }

@@ -46,10 +46,10 @@ async function renderPosts() {
             img.src = featuredMedia.source_url;
             img.alt = featuredMedia.alt_text || '';
             img.style.minWidth = '100px';
-            img.style.height = '150px';
+            img.style.height = '200px';
             img.style.objectFit = 'cover';
             img.style.display = 'flex';
-            img.style.paddingTop ="1rem";
+            img.style.paddingTop ="0.7rem";
             postElement.appendChild(img);
           }
         }
@@ -82,11 +82,9 @@ let activeIdxSlide = 0;
 
 
 function showSlide() {
-  slides.forEach((slide, idx) => {
-    slide.style.transform = `translateX(${(idx - activeIdxSlide) * 50}%)`
-
-  });
+  sliderWrapper.style.transform = `translateX(-${activeIdxSlide * 50}%)`;
 }
+
 
 leftBtn.addEventListener('click', () => {
   activeIdxSlide--;
@@ -101,8 +99,8 @@ leftBtn.addEventListener('click', () => {
 
 rightBtn.addEventListener('click', () => {
   activeIdxSlide++;
-  if(activeIdxSlide > slides.length - 1){
-    activeIdxSlide = slides.length - 1;
+  if(activeIdxSlide > sliderWrapper.length - 1){
+    activeIdxSlide = sliderWrapper.length - 1;
   }
   showSlide();
 

@@ -79,15 +79,12 @@ const rightBtn =document.querySelector('#right-btn');
 let width = sliderWrapper.clientWidth;
 let activeIdxSlide = 0;
 
-slides.forEach((slide, idx) => {
-  slide.style.transform = `translateX(${idx * width + 'px'})`;
 
-});
 
-function showSlide(){
+function showSlide() {
   slides.forEach((slide, idx) => {
-    slide.style.transform = `translateX(${(idx - activeIdxSlide) * width + 'px'})`;
-  
+    slide.style.transform = `translateX(${(idx - activeIdxSlide) * 100}%)`
+
   });
 }
 

@@ -302,7 +302,7 @@ div.product > *{
     background-color: white;
     margin-top: 5rem;
     justify-content: flex-start; 
-    transition: transform 100ms ease-in ;
+    transition: transform 50ms ease-in ;
     transform: translateX(0);
     margin: 2rem;
    

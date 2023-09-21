@@ -10,12 +10,20 @@
 @font-face {
     font-family:'Urbanist', sans-serif; 
     src: url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
-}
+};
+
+@font-face {
+    font-family:'Urbanist', sans-serif; 
+    src: url('https://fonts.googleapis.com/css2?family=Raleway&family=Reem+Kufi+Fun:wght@700&family=Urbanist:wght@600&display=swap');
+  
+};
 
 @font-face {
     font-family: 'Playfair Display SC', serif;
     src: url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
-}
+};
+
+
 
 
 html{
@@ -193,13 +201,14 @@ footer{
     font-size: 12px;
     
    } 
+
+
 .coptrights{
 
     font-size: 10px;
     padding-top: 2rem;
     
    } 
-
 
 .background-img,
 .contact-form-container,
@@ -233,6 +242,19 @@ footer{
 
 
 } 
+
+
+.header-contact-form{
+    font-family:'Urbanist';
+    font-weight: 700;
+    font-size:25px ;
+    line-height: 42px;
+    
+    
+
+}
+
+
 
 
 
@@ -316,6 +338,7 @@ div.product > *{
 }
 
 div.card .wp-block-heading{
+    font-family: 'Urbanist';
     margin: 0%;
     font-size: 18px;
     font-weight: 600;

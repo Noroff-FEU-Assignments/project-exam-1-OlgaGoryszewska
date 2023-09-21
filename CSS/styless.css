@@ -273,7 +273,7 @@ div.product > *{
 .slider-wrapper{
     
     display: flex;
-    height: 500px;
+    height: 450px;
     max-width:100vp;
     overflow: hidden;
     z-index: 2;

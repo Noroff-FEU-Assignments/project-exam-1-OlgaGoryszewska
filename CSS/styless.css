@@ -177,6 +177,7 @@ footer{
     background-color:var(--grey);
     display: flex;
     flex-direction: column;
+    z-index: 1;
   }  
 
 .logo-footer{
@@ -272,9 +273,10 @@ div.product > *{
 .slider-wrapper{
     
     display: flex;
-    height: 400px;
+    height: 500px;
     max-width:100vp;
     overflow: hidden;
+    z-index: 2;
      
 }
 

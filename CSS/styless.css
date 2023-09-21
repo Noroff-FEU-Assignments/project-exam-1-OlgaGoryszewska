@@ -230,14 +230,42 @@ footer{
 label{
     font-family: 'Urbanist';
     color: var(--black);
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem ;
     
+
+    
+}
+
+
+form{
+    
+}
+
+input[type="submit"] {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+input[type="text"],
+input[type="email"],
+textarea{
+    
+    border: 0;
+    border-bottom: solid var(--black) 1px;
+    height: 1.6rem;
+}
+
+textarea{
+    
+    height: 6rem;
 }
 
 
 
 .background-img{
     background-image: url('../IMG/main-img.jpg');
-    margin: 3rem;
+    margin: 2rem;
 
 }
 

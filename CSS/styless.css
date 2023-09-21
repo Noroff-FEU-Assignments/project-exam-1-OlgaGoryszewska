@@ -263,32 +263,24 @@ div.product > *{
 /* Last post carousel*/
 
 .main-wrapper{
-    width: 100%;
+    min-width:100vp;
     max-width: 500px;
     
     
     
 }
 
+.main-slider-wrapper{
+    overflow: hidden;
+}
+
 .slider-wrapper{
     
     display: flex;
     height: 450px;
-    max-width:100vp;
-    overflow: hidden;
-    z-index: 2;
+    min-width:100vp;
+   
      
-}
-
-
-.last-posts-button-wrapper{
-    display: flex;
-    flex-direction: row;
-    height: 20px;
-    padding: 3rem;
-    justify-content: center;
-    
-
 }
 
 
@@ -307,10 +299,7 @@ div.product > *{
     transform: translateX(0);
     margin: 0.5rem;
    
-    
-   
-    
-    
+ 
 
 }
 
@@ -335,6 +324,17 @@ div.card .wp-block-heading{
 
 div.card p {
     font-size: 13px;
+}
+
+
+.last-posts-button-wrapper{
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    padding: 3rem;
+    justify-content: center;
+    
+
 }
 
 #right-btn,

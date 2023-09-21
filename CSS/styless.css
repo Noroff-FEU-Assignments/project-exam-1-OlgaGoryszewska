@@ -214,6 +214,8 @@ footer{
 .contact-form-container,
 .blog-specific-page-container,
 .blog-page-container{
+    font-family: 'Urbanist';
+    color: var(--black);
     background-color: var(--white);
     margin: 2rem;
     padding: 0.5rem;
@@ -224,6 +226,14 @@ footer{
 
 
 } 
+
+label{
+    font-family: 'Urbanist';
+    color: var(--black);
+    
+}
+
+
 
 .background-img{
     background-image: url('../IMG/main-img.jpg');

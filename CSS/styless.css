@@ -244,8 +244,18 @@ form{
 }
 
 input[type="submit"] {
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-bottom: 2rem;
+    width: 170px;
+    height: 59px;
+    background-color: var(--black);
+    color: var(--white);
+    border: 0;
+    justify-self: center;
+    align-self: center;
+    font-size: 18px;
+    font-family: 'Urbanist';
+
 }
 input[type="text"],
 input[type="email"],
@@ -259,6 +269,7 @@ textarea{
 textarea{
     
     height: 6rem;
+    border: solid 1px;
 }
 
 

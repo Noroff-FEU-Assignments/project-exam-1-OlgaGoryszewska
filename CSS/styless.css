@@ -346,6 +346,9 @@ div.card p {
     background-color: transparent;
     margin: 1rem;
     margin-top: 0rem;
+    outline-color: #30302F;
+    border-width: 1px;
+    border-style: none;
 
 }
 

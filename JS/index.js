@@ -76,7 +76,7 @@ const sliderWrapper = document.querySelector('.slider-wrapper');
 const leftBtn = document.querySelector('#left-btn');
 const rightBtn =document.querySelector('#right-btn');
 
-let width = sliderWrapper.clientWidth;
+
 let activeIdxSlide = 0;
 
 
@@ -93,6 +93,7 @@ leftBtn.addEventListener('click', () => {
   }
   
   showSlide();
+  rightBtn.disabled = false;
   
 
 });
@@ -103,6 +104,9 @@ rightBtn.addEventListener('click', () => {
     activeIdxSlide = sliderWrapper.length - 1;
   }
   showSlide();
+  if (activeIdxSlide >= 10 || activeIdxSlide >= posts.length - 1) {
+    rightBtn.disabled = true;
+  }
 
 });
 

@@ -99,7 +99,7 @@ h3{
     padding-top: 4rem;
     padding:1.5rem;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
 
 }
 
@@ -112,6 +112,8 @@ h3{
     display: none;
     background-color: var(--beige);
     padding: 2rem;
+    margin-top: 100px;
+
    
     
 
@@ -125,9 +127,9 @@ h3{
     display: flex;
     flex-direction: column;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     width: 100%;
-    border-bottom: solid 1px --black;
+    box-shadow: 0px 2px 6px 0px #0000001A;
     
     
 
@@ -143,7 +145,7 @@ header{
     position:relative;
     height: 100px;
     box-shadow: 0px 2px 6px 0px #0000001A;
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     width: 100%;
    
@@ -220,13 +222,6 @@ main{
   
 }  
 
-.under-text-overlay{
-    font-size: 24px;
-    font-style:italic;
-    font-weight: 200;
-    top: 80%;
-    
-  }  
 
 
 

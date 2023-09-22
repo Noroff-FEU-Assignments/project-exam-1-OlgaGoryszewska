@@ -201,17 +201,17 @@ main{
     }
 }
 
-.under-text-overlay,
+
 .text-overlay{
   color: #FFF;
   text-align: center;
   font-family: Playfair Display SC;
-  font-size: 36px;
+  font-size: 28px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
-  top: 55%;
+  top: 75%;
   position: absolute;
   padding: 0.4rem;
   padding-right: 2rem;

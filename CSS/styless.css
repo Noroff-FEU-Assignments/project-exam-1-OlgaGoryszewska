@@ -23,7 +23,10 @@
     src: url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
 };
 
-
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+};
 
 
 html{
@@ -124,6 +127,8 @@ header{
     background-color: var(--beige);
     position:relative;
     height: 100px;
+    box-shadow: 0px 2px 6px 0px #0000001A;
+
 
    
   }  
@@ -443,7 +448,62 @@ div.card p {
 
 /* About us styling*/
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-about-us-page{
+    background-color: var(--beige);
+}
+
 .about-us-main-wrapper{
+    display:flex;
+    flex-direction: column;
+    padding-top: 0rem;
+    padding: 2rem;
     
+
+}
+
+.header-about-us{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 36px;
+    align-self: center;
+    font-weight: 600;
+    animation: fadeIn 2s;
+    text-align: center;
+
+}
+
+.content-about-us{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    animation: fadeIn 2s;
+    text-align: center;
+
+}
+
+.about-us-image{
+    padding-bottom: 2rem;
+    object-fit: cover;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideDown 1s ease-out 0.5s forwards; 
+}
 
 }

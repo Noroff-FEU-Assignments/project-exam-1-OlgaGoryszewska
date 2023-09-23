@@ -187,9 +187,12 @@ main{
 /* Home page */
 
 .main-img-div{
+    display: grid;
     position: relative;
     padding-top: 6rem;
     margin-bottom: -6rem;
+    align-items: center;
+    justify-items: center;
 
     }  
 
@@ -198,6 +201,8 @@ main{
   max-width: 100%;
   min-height:60vh ;
   animation: slideIn 2s;
+  align-self: center;
+  justify-self: center;
 
 
    
@@ -432,8 +437,13 @@ div.product > *{
 /* Last post carousel*/
 
 .main-wrapper{
-    min-width:100vp;
-    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    max-width: 1000px;
+   
+
+
     
     
     
@@ -441,13 +451,20 @@ div.product > *{
 
 .main-slider-wrapper{
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
 }
 
 .slider-wrapper{
     
     display: flex;
     height: 450px;
-    min-width:100vp;
+    width: 100vw;
+    align-items: center;
+    justify-items: center;
+
    
      
 }
@@ -467,6 +484,8 @@ div.product > *{
     transition: transform 100ms ease-in ;
     transform: translateX(0);
     margin: 0.5rem;
+    align-self: center;
+    justify-self: center;
    
  
 
@@ -542,7 +561,9 @@ div.card p {
 }
 
 .main-about-us-page{
+    
     background-color:var(--grey);
+    
 }
 
 .about-us-main-wrapper{
@@ -550,6 +571,8 @@ div.card p {
     flex-direction: column;
     padding-top: 0rem;
     padding: 2rem;
+    max-width: 800px;
+    align-content: center;
     
 
 }
@@ -576,6 +599,8 @@ div.card p {
 }
 
 .about-us-image{
+    align-self: center;
+    max-width: 500px;
     padding-bottom: 2rem;
     object-fit: cover;
     opacity: 0;
@@ -584,4 +609,10 @@ div.card p {
     border-radius:25px;
 }
 
-}
+@media screen and (min-width:601px) {
+
+    .grid-exhibition-cosmology {
+      background-color: var(--orange);
+  
+    }
+  

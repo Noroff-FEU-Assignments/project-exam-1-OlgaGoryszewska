@@ -104,7 +104,7 @@ rightBtn.addEventListener('click', () => {
     activeIdxSlide = sliderWrapper.length - 1;
   }
   showSlide();
-  if (activeIdxSlide >= 10 || activeIdxSlide >= posts.length - 1) {
+  if (activeIdxSlide >= 4 || activeIdxSlide >= posts.length - 1) {
     rightBtn.disabled = true;
   }
 

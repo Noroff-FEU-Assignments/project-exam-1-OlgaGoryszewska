@@ -33,12 +33,14 @@ html{
     margin: auto;
 }
 
+
 body{
     color:var(--beige);
     margin: auto;
     min-height: 100dvh;
 
 }
+
 
 h1,
 p,
@@ -52,6 +54,8 @@ h3{
     
     
 }
+
+
 
 
 h1{
@@ -70,6 +74,11 @@ h2{
 
 h3{
     text-align: left;
+ }
+
+ p{
+
+    font-weight: 500;
  }
 
 
@@ -97,9 +106,10 @@ h3{
 .menu-link {
     font-family:'Urbanist', sans-serif; 
     padding-top: 4rem;
-    padding:1.5rem;
+    padding:1.3rem;
     font-size: 18px;
     font-weight: 500;
+    
 
 }
 
@@ -108,22 +118,22 @@ h3{
 
 }
 
+
+
 .menu{
     display: none;
-    background-color: var(--beige);
+    background-color: var(--grey);
     padding: 2rem;
     margin-top: 100px;
 
-   
-    
-
 }
+
 
 #checkbox{
     display: none;
 }
 
-#checkbox:checked ~ .menu {
+#checkbox:checked ~ .menu{
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -131,12 +141,10 @@ h3{
     width: 100%;
     box-shadow: 0px 2px 6px 0px #0000001A;
     
-    
 
-    
-
-   
   }  
+
+
 
 header{
     display: flex;
@@ -149,10 +157,7 @@ header{
     position: fixed;
     width: 100%;
    
-    
 
-
-   
   }  
 
 main{
@@ -165,6 +170,8 @@ main{
 
 
     }  
+
+/* Home page */
 
 .main-img-div{
     position: relative;
@@ -486,7 +493,7 @@ div.card p {
 }
 
 .main-about-us-page{
-    background-color: var(--beige);
+    background-color:var(--grey);
 }
 
 .about-us-main-wrapper{

@@ -24,8 +24,21 @@
 };
 
 @font-face {
+    font-family: 'Playfair Display', serif;
+    src: url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+};
+
+
+
+@font-face {
     font-family: 'Poppins', sans-serif;
     src: url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+};
+
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@700&display=swap');
+    
 };
 
 
@@ -76,13 +89,13 @@ h3{
     text-align: left;
  }
 
- p{
 
-    font-weight: 500;
+
+.bold-text{
+    font-weight: 700;
  }
 
-
-
+/* Menu bar */
 
 .logo-img{
     position: absolute;
@@ -230,13 +243,14 @@ main{
 }  
 
 
-
+/* Footer*/
 
 footer{
     background-color:var(--grey);
     display: flex;
     flex-direction: column;
     z-index: 1;
+    border-top:1px solid #0000001A;
   }  
 
 .logo-footer{
@@ -355,6 +369,7 @@ textarea{
 
 }
 
+/* Blog Page*/
 
 div.product > *{
    min-width: 100vp;
@@ -508,7 +523,7 @@ div.card p {
 .header-about-us{
     margin-top: 0;
     margin-bottom: 1rem;
-    font-family: 'Playfair Display SC', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 36px;
     align-self: center;
     font-weight: 600;
@@ -532,6 +547,7 @@ div.card p {
     opacity: 0;
     transform: translateY(-20px);
     animation: slideDown 1s ease-out 0.5s forwards; 
+    border-radius:25px;
 }
 
 }

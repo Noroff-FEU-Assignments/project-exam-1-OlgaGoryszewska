@@ -1,4 +1,6 @@
 const blogContainer = document.querySelector(".blog-specific-page-container");
+const modal = document.getElementById("image-modal");
+const modalImage = document.getElementById("modal-image");
 
 async function getBlogPost() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -27,6 +29,7 @@ async function getBlogPost() {
         title.style.fontSize ="24px";
         title.style.fontStyle ="Semi Bold";
         title.style.paddingLeft = "0rem";
+        title.style.paddingTop="6rem"
         blogContainer.appendChild(title);
 
 
@@ -53,5 +56,27 @@ async function getBlogPost() {
 
     }
 }
+
+blogContainer.addEventListener("click", (e) => {
+    if (e.target.tagName === "IMG") {
+        modal.style.display = "block";
+        modalImage.src = e.target.src;
+    }
+});
+
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal || e.target.className === "close-modal") {
+        modal.style.display = "none";
+    }
+});
+
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        modal.style.display = "none";
+    }
+});
+
 
 getBlogPost();

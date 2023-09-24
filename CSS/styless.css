@@ -100,7 +100,7 @@ h3{
 .logo-img{
     position: absolute;
     top: 0.4rem;
-    width: 100px;
+    width: 75px;
     align-self: center;
     padding-bottom: 0.4rem;
     z-index: 1;
@@ -112,16 +112,19 @@ h3{
     color: var(--black);
     align-self: flex-end;
     padding: 2rem;
-    padding-bottom: 1rem;
+    margin: 0;
+    
 
 
 }
+
 .menu-link {
     font-family:'Urbanist', sans-serif; 
     padding-top: 4rem;
-    padding:1.3rem;
+    padding:1rem;
     font-size: 18px;
     font-weight: 500;
+    transition: transform 0.3s ease-in-out;
     
 
 }
@@ -131,7 +134,26 @@ h3{
 
 }
 
+@media screen and (min-width:1099px) {
 
+    .top-menu{
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+        margin-top: 2rem;
+        margin-right:2rem;
+    }
+        
+    .hamburger{
+        display: none;
+
+    }
+
+    header{
+        flex-direction: row;
+      }  
+    
+    }
 
 .menu{
     display: none;
@@ -153,8 +175,7 @@ h3{
     z-index: 1;
     width: 100%;
     box-shadow: 0px 2px 6px 0px #0000001A;
-    
-
+   
   }  
 
 
@@ -164,12 +185,12 @@ header{
     flex-direction: column;
     background-color: var(--beige);
     position:relative;
-    height: 100px;
+    height: 80px;
     box-shadow: 0px 2px 6px 0px #0000001A;
     z-index: 2;
     position: fixed;
     width: 100%;
-   
+    
 
   }  
 
@@ -566,6 +587,9 @@ div.card p {
     }
 }
 
+.main-about-us-page h1{
+    justify-self: left;
+}
 .main-about-us-page{
     display: flex;
     align-items: center;
@@ -621,18 +645,15 @@ div.card p {
     
 }
 
-
+.main-about-us-page h1{
+    justify-self: left;
+}
 
 @media screen and (min-width:601px) {
 
     .about-us-main-wrapper{
         
         
-        
-        
-    
-    }
+}
 
    
-    }
-}

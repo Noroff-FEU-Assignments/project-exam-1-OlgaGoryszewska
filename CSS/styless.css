@@ -299,6 +299,11 @@ footer{
 
 } 
 
+.background-img{
+    justify-items: center;
+    align-items: center;
+}
+
 .blog-specific-page-container{
     position: relative;
 
@@ -382,6 +387,9 @@ textarea{
 .background-img{
     background-image: url('../IMG/main-img.jpg');
     margin: 2rem;
+    background-repeat: no-repeat;
+    justify-self: center;
+    align-self: center;
 
 }
 
@@ -442,10 +450,6 @@ div.product > *{
     align-self: center;
     max-width: 1000px;
    
-
-
-    
-    
     
 }
 
@@ -542,7 +546,7 @@ div.card p {
 
 }
 
-/* About us styling*/
+/* About us styling */
 
 @keyframes fadeIn {
     from {
@@ -561,7 +565,9 @@ div.card p {
 }
 
 .main-about-us-page{
-    
+    display: flex;
+    align-items: center;
+    justify-items: center;
     background-color:var(--grey);
     
 }
@@ -571,8 +577,9 @@ div.card p {
     flex-direction: column;
     padding-top: 0rem;
     padding: 2rem;
-    max-width: 800px;
+    max-width: 500px;
     align-content: center;
+    justify-content: center;
     
 
 }
@@ -600,7 +607,7 @@ div.card p {
 
 .about-us-image{
     align-self: center;
-    max-width: 500px;
+    max-width: 400px;
     padding-bottom: 2rem;
     object-fit: cover;
     opacity: 0;

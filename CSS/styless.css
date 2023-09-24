@@ -299,6 +299,11 @@ footer{
 
 } 
 
+#contact-form{
+    display: flex;
+    flex-direction: column;
+}
+
 .background-img{
     justify-items: center;
     align-items: center;
@@ -450,6 +455,7 @@ div.product > *{
     align-self: center;
     max-width: 1000px;
    
+
     
 }
 

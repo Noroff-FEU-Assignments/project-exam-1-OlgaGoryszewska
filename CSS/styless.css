@@ -159,7 +159,8 @@ h3{
     display: none;
     background-color: var(--grey);
     padding: 2rem;
-    margin-top: 100px;
+    margin-top: 80px;
+    
 
 }
 
@@ -183,7 +184,7 @@ h3{
 header{
     display: flex;
     flex-direction: column;
-    background-color: var(--beige);
+    background-color: transparent;
     position:relative;
     height: 80px;
     box-shadow: 0px 2px 6px 0px #0000001A;
@@ -193,6 +194,8 @@ header{
     
 
   }  
+
+ 
 
 main{
     min-height: 100vh;
@@ -210,7 +213,7 @@ main{
 .main-img-div{
     display: grid;
     position: relative;
-    padding-top: 6rem;
+    padding-top: 0rem;
     margin-bottom: -6rem;
     align-items: center;
     justify-items: center;
@@ -228,6 +231,16 @@ main{
 
    
   }  
+
+  @media screen and (min-width:1016px) {
+
+    .main-img-div{
+    padding-top: 0rem;
+
+    }
+    
+  
+    }
 
   @keyframes fadeIn {
     from {

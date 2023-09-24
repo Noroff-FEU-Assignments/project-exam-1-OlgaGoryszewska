@@ -455,8 +455,6 @@ div.product > *{
     align-self: center;
     max-width: 1000px;
    
-
-    
 }
 
 .main-slider-wrapper{
@@ -474,9 +472,7 @@ div.product > *{
     width: 100vw;
     align-items: center;
     justify-items: center;
-
-   
-     
+ 
 }
 
 
@@ -497,7 +493,6 @@ div.product > *{
     align-self: center;
     justify-self: center;
    
- 
 
 }
 
@@ -510,8 +505,9 @@ div.product > *{
     padding:1rem;
     
     
-
 }
+
+
 
 div.card .wp-block-heading{
     font-family: 'Urbanist';
@@ -582,8 +578,7 @@ div.card p {
     display:flex;
     flex-direction: column;
     padding-top: 0rem;
-    padding: 2rem;
-    max-width: 500px;
+    min-width: 100vw;
     align-content: center;
     justify-content: center;
     
@@ -611,10 +606,11 @@ div.card p {
 
 }
 
+
 .about-us-image{
     align-self: center;
-    max-width: 400px;
-    padding-bottom: 2rem;
+    
+    max-width: 80%;
     object-fit: cover;
     opacity: 0;
     transform: translateY(-20px);
@@ -622,10 +618,18 @@ div.card p {
     border-radius:25px;
 }
 
+
+
 @media screen and (min-width:601px) {
 
-    .grid-exhibition-cosmology {
-      background-color: var(--orange);
-  
+    .about-us-main-wrapper{
+        
+        
+        
+        
+    
     }
-  
+
+   
+    }
+}

@@ -587,7 +587,7 @@ div.card p {
 
 .header-about-us{
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     font-family: 'Playfair Display', serif;
     font-size: 36px;
     align-self: center;
@@ -598,6 +598,8 @@ div.card p {
 }
 
 .content-about-us{
+    padding-right: 3rem;
+    padding-left: 3rem;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -609,13 +611,14 @@ div.card p {
 
 .about-us-image{
     align-self: center;
-    
     max-width: 80%;
     object-fit: cover;
     opacity: 0;
     transform: translateY(-20px);
     animation: slideDown 1s ease-out 0.5s forwards; 
     border-radius:25px;
+    margin-bottom: 3rem;
+    
 }
 
 

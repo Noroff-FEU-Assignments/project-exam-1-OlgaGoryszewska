@@ -29,7 +29,7 @@ async function getBlogPost() {
         title.style.fontSize ="24px";
         title.style.fontStyle ="Semi Bold";
         title.style.paddingLeft = "0rem";
-        title.style.paddingTop="6rem"
+        title.style.paddingTop="1rem"
         blogContainer.appendChild(title);
 
 
@@ -40,10 +40,11 @@ async function getBlogPost() {
             const img = document.createElement("img");
             img.src = featuredImage.source_url;
             img.alt = featuredImage.alt_text;
-            img.style.minWidth =" 200px";
+            img.style.minWidth =" 100vp";
             img.style.height = "248px";
             img.style.objectFit ="cover";
             img.style.display ="flex";
+            img.style.objectFit="cover";
             blogContainer.appendChild(img);
         }
 

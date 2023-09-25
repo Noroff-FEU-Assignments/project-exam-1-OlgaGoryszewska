@@ -113,6 +113,7 @@ h3{
     align-self: flex-end;
     padding: 2rem;
     margin: 0;
+    z-index: 2;
     
 
 
@@ -155,11 +156,10 @@ h3{
     
     }
 
+
+
 .menu{
     display: none;
-    background-color: var(--grey);
-    padding: 2rem;
-    margin-top: 80px;
     
 
 }
@@ -177,6 +177,10 @@ h3{
     z-index: 1;
     width: 100%;
     box-shadow: 0px 2px 6px 0px #0000001A;
+    background-color: var(--grey);
+    padding: 2rem;
+    margin-top: 0rem;
+    padding-top: 4rem;
    
   }  
 
@@ -184,7 +188,7 @@ h3{
 header{
     display: flex;
     flex-direction: column;
-    background-color: transparent;
+    background-color: var(--beige);
     position:relative;
     height: 80px;
     box-shadow: 0px 2px 6px 0px #0000001A;
@@ -194,6 +198,11 @@ header{
     
 
   }  
+
+.header-index{
+    background-color: transparent;
+
+}
 
  
 
@@ -227,6 +236,7 @@ main{
   animation: slideIn 2s;
   align-self: center;
   justify-self: center;
+  
 
 
    
@@ -238,6 +248,8 @@ main{
     padding-top: 0rem;
 
     }
+
+
     
   
     }
@@ -316,6 +328,8 @@ footer{
 
 /* Contact form*/
 
+
+
 .background-img,
 .contact-form,
 .blog-specific-page-container,
@@ -324,7 +338,7 @@ footer{
     color: var(--black);
     background-color: var(--white);
     margin: 2rem;
-    padding: 0.5rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -383,12 +397,8 @@ label{
     font-weight: 600;
     margin-top: 1rem;
     margin-bottom: 0.5rem ;
-    
 
-    
 }
-
-
 
 input[type="submit"] {
     margin-top: 4rem;
@@ -421,8 +431,6 @@ textarea{
     border: solid 1px;
 }
 
-
-
 .background-img{
     background-image: url('../IMG/main-img.jpg');
     margin: 2rem;
@@ -441,9 +449,7 @@ textarea{
     align-content: center;
     min-width: 100vp;
 
-
 } 
-
 
 .header-contact-form{
     font-family:'Urbanist';
@@ -451,11 +457,33 @@ textarea{
     font-size:25px ;
     line-height: 42px;
     
-    
-
 }
 
 /* Blog Page*/
+
+.main-blog-page{
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+@media screen and (min-width:600px) {
+
+   
+    .blog-page-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        justify-self: center;
+
+    }
+    .blog-specific-page-container{
+        max-width: 600px;
+        justify-self: center;
+    }
+
+   
+    }
 
 div.product > *{
    min-width: 100vp;
@@ -475,8 +503,8 @@ div.product > *{
     font-weight: bold;
     border: none;
     font-family: 'Urbanist';
-    background-color:var(--white);
     padding: 1rem;
+    background-color: transparent;
 
   } 
 
@@ -600,19 +628,17 @@ div.card p {
     }
 }
 
-.main-about-us-page h1{
-    justify-self: left;
-}
-.main-about-us-page{
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    background-color:var(--grey);
+@media screen and (min-width:600px) {
+
+    .about-us-main-wrapper{
+      max-width: 600px;
+    
+    }
     
 }
 
 .about-us-main-wrapper{
-    display:flex;
+    display: flex;
     flex-direction: column;
     padding-top: 0rem;
     min-width: 100vw;
@@ -658,15 +684,7 @@ div.card p {
     
 }
 
-.main-about-us-page h1{
-    justify-self: left;
-}
 
-@media screen and (min-width:601px) {
 
-    .about-us-main-wrapper{
-        
-        
-}
 
    

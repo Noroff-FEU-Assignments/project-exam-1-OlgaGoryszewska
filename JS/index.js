@@ -45,7 +45,6 @@ async function renderPosts() {
             const img = document.createElement('img');
             img.src = featuredMedia.source_url;
             img.alt = featuredMedia.alt_text || '';
-            img.style.minWidth = '100px';
             img.style.height = '150px';
             img.style.objectFit = 'cover';
             img.style.display = 'flex';

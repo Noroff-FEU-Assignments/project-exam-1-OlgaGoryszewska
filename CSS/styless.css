@@ -558,7 +558,7 @@ div.product > *{
     justify-content: flex-start; 
     transition: transform 100ms ease-in ;
     transform: translateX(0);
-    margin: 1rem;
+    margin: 0.5rem;
     align-self: center;
     justify-self: center;
    
@@ -566,6 +566,8 @@ div.product > *{
 }
 
 .card-container{
+    height: 230px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;

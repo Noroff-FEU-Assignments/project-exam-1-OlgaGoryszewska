@@ -29,7 +29,7 @@ async function renderPosts() {
     const postContainers = document.querySelectorAll('.card');
     
 
-    // Loop through each container and add the latest post to it
+    // Looping through each container and adding the latest post to it
     postContainers.forEach((container, index) => {
       if (index < posts.length) {
         const post = posts[index];
@@ -38,7 +38,7 @@ async function renderPosts() {
         
 
 
-        // Check if a featured image is available in the post
+      
         if (post._embedded && post._embedded['wp:featuredmedia']) {
           const featuredMedia = post._embedded['wp:featuredmedia'][0];
           if (featuredMedia.source_url) {
@@ -69,46 +69,18 @@ async function renderPosts() {
 renderPosts();
 
 // Carousel
+const slider = document.querySelector(".slider");
+const rail = slider.querySelector(".slider-rail");
+const previous = slider.querySelector("button.left-btn");
+const next = slider.querySelector("button.right-btn");
 
-const slides = document.querySelectorAll('.card');
-const sliderWrapper = document.querySelector('.slider-wrapper');
-
-const leftBtn = document.querySelector('#left-btn');
-const rightBtn =document.querySelector('#right-btn');
-
-
-let activeIdxSlide = 0;
-
-
-
-function showSlide() {
-  sliderWrapper.style.transform = `translateX(-${activeIdxSlide * 50}%)`;
+function nextPage () {
+  rail.style.transform = "translateX(-100%)"
 }
 
+function previousPage() {
+  rail.style.transform = "translateX(0)"
+}
 
-leftBtn.addEventListener('click', () => {
-  activeIdxSlide--;
-  if(activeIdxSlide < 0){
-    activeIdxSlide = 0;
-  }
-  
-  showSlide();
-  rightBtn.disabled = false;
-  
-
-});
-
-rightBtn.addEventListener('click', () => {
-  activeIdxSlide++;
-  if(activeIdxSlide > sliderWrapper.length - 1){
-    activeIdxSlide = sliderWrapper.length - 1;
-  }
-  showSlide();
-  if (activeIdxSlide >= 4 || activeIdxSlide >= posts.length - 1) {
-    rightBtn.disabled = true;
-  }
-
-});
-
-
-
+next.addEventListener("click", nextPage)
+previous.addEventListener("click", previousPage)

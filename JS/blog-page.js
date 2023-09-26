@@ -1,8 +1,9 @@
+
 const apiBase = "https://public-api.wordpress.com/wp/v2/sites/semester69.wordpress.com/posts?_embed";
 let currentPage = 1;
-const postsPerPage =10;
+const postsPerPage = 10;
 const container = document.querySelector(".blog-page-container");
-const loadMoreButton =document.getElementById ("load-more");
+const loadMoreButton = document.getElementById("load-more");
 
 // Fetching REST API
 async function getProducts() {
@@ -11,14 +12,10 @@ async function getProducts() {
     return products;
 }
 
-
 function createProductHTML(product) {
-    const container = document.querySelector(".blog-page-container");
-
     const productContainer = document.createElement("div");
     productContainer.classList.add("product");
     productContainer.id = product.id;
-    
 
     const title = document.createElement("h2");
     title.innerText = product.title.rendered;
@@ -66,13 +63,12 @@ function createProductHTML(product) {
     }
 }
 
+   
+
     container.appendChild(productContainer);
 
     return productContainer;
 }
-
-
-
 
 function redirectToProductDetailPage(productId) {
     window.location.href = `blog-specific-page.html?id=${productId}`;
@@ -80,7 +76,6 @@ function redirectToProductDetailPage(productId) {
 
 async function createProductsHTML() {
     const products = await getProducts();
-    const container = document.querySelector(".blog-page-container");
 
     for (const product of products) {
         const productContainer = createProductHTML(product);
@@ -95,14 +90,14 @@ async function createProductsHTML() {
 // Get more posts button
 
 async function getMorePosts(page) {
-    const response =await fetch (`${apiBase}&page=${page}`);
+    const response = await fetch(`${apiBase}&page=${page}`);
     const products = await response.json();
     return products;
 }
 
-function createPostsHTML(products){
-    for (const product of products){
-        const productContainer = createProductHTML (product);
+function createPostsHTML(products) {
+    for (const product of products) {
+        const productContainer = createProductHTML(product);
         container.appendChild(productContainer);
     }
 }
@@ -110,29 +105,20 @@ function createPostsHTML(products){
 async function loadMorePosts() {
     currentPage++;
     const morePosts = await getMorePosts(currentPage);
-    createPostsHTML(morePosts);
 
-    if (Array.isArray(morePosts)){
+    if (Array.isArray(morePosts) && morePosts.length > 0) {
         createPostsHTML(morePosts);
-
-        if(morePosts.length ===0){
-            loadMore.style.display ="none";
-
-    }
-
-    }else{
-        console.error("Error loading more posts:",morePosts);
+        
+    } else {
+        loadMoreButton.style.display = "none"; 
+        loadMoreButton.removeEventListener("click", loadMorePosts);
     }
 }
 
-
-loadMoreButton.addEventListener("click",loadMorePosts);
-
+loadMoreButton.addEventListener("click", loadMorePosts);
 
 async function main() {
     await createProductsHTML();
 }
 
-
 main();
-

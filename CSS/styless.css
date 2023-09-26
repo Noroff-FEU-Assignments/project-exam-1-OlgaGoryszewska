@@ -518,18 +518,25 @@ div.product > *{
 /* Last post carousel*/
 
 .main-wrapper{
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     align-self: center;
     max-width: 1000px;
+    
    
 }
 
 .main-slider-wrapper{
+    position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-items: center;
+    z-index: 1;
+    grid-row: 1;
+    grid-column-start: 1;
 
 }
 
@@ -591,12 +598,13 @@ div.card p {
 
 
 .last-posts-button-wrapper{
-    display: flex;
-    flex-direction: row;
-    height: 20px;
-    padding: 3rem;
-    justify-content: center;
-    
+    align-self: center;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: 2; 
+    min-width: 100vw;
+    justify-content: space-between;  
 
 }
 
@@ -605,16 +613,18 @@ div.card p {
     border-radius: 50%;
     width: 2rem;
     height: 2rem;
-    border-color: var(--black) 1px;
-    background-color: transparent;
-    margin: 1rem;
+    background-color: var(--grey); 
     margin-top: 0rem;
-    outline-color: #30302F;
-    border-width: 1px;
     border-style: none;
     text-decoration: none;
     color: var(--black);
 
+}
+#left-btn{
+    place-self: end;
+}
+#right-btn{
+    place-self: start;
 }
 
 /* About us styling */

@@ -52,6 +52,8 @@ async function getBlogPost() {
         content.innerHTML = post.content.rendered;
         blogContainer.appendChild(content);
 
+        document.title = post.title.rendered;
+
     } catch (error) {
         console.error("Error fetching and rendering blog post:", error);
 

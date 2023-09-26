@@ -548,7 +548,6 @@ div.product > *{
 
 
 .card{
-    
     display: flex;
     flex-direction: column;
     flex: 0 0 33.333%;
@@ -567,7 +566,6 @@ div.product > *{
 }
 
 .card-container{
-    width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -577,27 +575,27 @@ div.product > *{
     
 }
 
-div.card .wp-block-heading{
+div .card p {
+    margin: 0.5rem;
+}
+
+div .card .wp-block-heading{
     font-family: 'Urbanist';
-    margin: 0%;
+    margin: 0rem;
     font-size: 18px;
     font-weight: 600;
 
 
 }
 
-div.card p {
-    font-size: 13px;
-}
-
-
 .right-btn,
 .left-btn{
+    margin-left: 1rem;
+    margin-right: 1rem;
     border-radius: 50%;
     width: 2rem;
     height: 2rem;
     background-color: var(--grey); 
-    margin-top: 0rem;
     text-decoration: none;
     color: var(--black);
 }

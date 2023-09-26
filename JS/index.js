@@ -46,7 +46,7 @@ async function renderPosts() {
             img.src = featuredMedia.source_url;
             img.alt = featuredMedia.alt_text || '';
             img.style.minWidth = '100px';
-            img.style.height = '200px';
+            img.style.height = '150px';
             img.style.objectFit = 'cover';
             img.style.display = 'flex';
             img.style.paddingTop ="0.7rem";
@@ -55,7 +55,7 @@ async function renderPosts() {
         }
 
         postElement.innerHTML += `
-          <p>${truncateText(post.content.rendered, 30)}</p>`;
+          <p>${truncateText(post.content.rendered, 5)}</p>`;
 
         container.appendChild(postElement);
       }

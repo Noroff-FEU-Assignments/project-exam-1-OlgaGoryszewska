@@ -546,10 +546,13 @@ div.product > *{
     margin-top: 1rem;
     display: flex;
     overflow-x: scroll;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     white-space: nowrap;
     width: 100%;
-    height: 200px;
+    height: 250px;
+    
+    
 
 
 }
@@ -558,6 +561,7 @@ div.product > *{
 .card-mobile-view{
     margin-right: 2rem;
     margin-top: 10px;
+    margin: 0.5rem;
     flex: 0 0 auto;
     height: 100%;
     width: 200px;
@@ -573,17 +577,10 @@ div.product > *{
     justify-self: center;
     scroll-snap-align: start;
     text-align: center;
-    
-   
 
 }
 
-.horizontal-scrolling-img{
 
-    height: 150px;
-    object-fit: cover;
-
-}
 
 .mobile-view-title{
     font-size: 16px;

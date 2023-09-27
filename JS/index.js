@@ -68,7 +68,7 @@ async function renderPosts() {
             img.src = featuredMedia.source_url;
             img.alt = featuredMedia.alt_text || '';
             img.style.maxWidth = '100%';
-            img.style.borderRadius=" 25px";
+            img.style.borderRadius=" 25px 25px 0px 0px";
             mobileViewElement.appendChild(img);
           }
         }

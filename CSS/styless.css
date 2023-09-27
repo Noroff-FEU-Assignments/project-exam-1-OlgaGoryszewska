@@ -567,7 +567,7 @@ div.product > *{
 
 .card-container{
     height: 230px;
-    width: 300px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -578,7 +578,7 @@ div.product > *{
 }
 
 div .card p {
-    margin: 0.5rem;
+    
 }
 
 div .card .wp-block-heading{

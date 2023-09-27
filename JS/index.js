@@ -67,19 +67,45 @@ async function renderPosts() {
 
 renderPosts();
 
-// Carousel
 const slider = document.querySelector(".slider");
 const rail = slider.querySelector(".slider-rail");
-const previous = slider.querySelector("button.left-btn");
-const next = slider.querySelector("button.right-btn");
+const slideWidth = rail.offsetWidth; // Get the width of a single slide
+let currentPage = 0;
 
-function nextPage () {
-  rail.style.transform = "translateX(-100%)"
+function updateButtonState() {
+  const next = slider.querySelector("button.right-btn");
+  const previous = slider.querySelector("button.left-btn");
+  
+  // Enable or disable the "Next" button based on the current page
+  next.disabled = currentPage === rail.children.length - 1;
+  
+  // Enable or disable the "Previous" button based on the current page
+  previous.disabled = currentPage === 0;
+}
+
+function nextPage() {
+  if (currentPage < rail.children.length - 1) {
+    currentPage++;
+    const translateXValue = -currentPage * slideWidth;
+    rail.style.transform = `translateX(${translateXValue}px)`;
+    updateButtonState();
+  }
 }
 
 function previousPage() {
-  rail.style.transform = "translateX(0)"
+  if (currentPage > 0) {
+    currentPage--;
+    const translateXValue = -currentPage * slideWidth;
+    rail.style.transform = `translateX(${translateXValue}px)`;
+    updateButtonState();
+  }
 }
 
-next.addEventListener("click", nextPage)
-previous.addEventListener("click", previousPage)
+const next = slider.querySelector("button.right-btn");
+const previous = slider.querySelector("button.left-btn");
+
+next.addEventListener("click", nextPage);
+previous.addEventListener("click", previousPage);
+
+// Initial button state setup
+updateButtonState();

@@ -1,5 +1,4 @@
-'use strict'
-
+'use strict';
 
 const apiBase = 'https://public-api.wordpress.com/wp/v2/sites/semester69.wordpress.com/posts?_embed&per_page=10';
 
@@ -26,19 +25,15 @@ function truncateText(text, maxLength) {
 async function renderPosts() {
   try {
     const posts = await getPosts();
-    const postContainers = document.querySelectorAll('.card');
     
-
-    // Looping through each container and adding the latest post to it
+    // Handle .card elements (the ones in the slider)
+    const postContainers = document.querySelectorAll('.card');
     postContainers.forEach((container, index) => {
       if (index < posts.length) {
         const post = posts[index];
         const postElement = document.createElement('div');
         postElement.classList.add('card-container');
-        
 
-
-      
         if (post._embedded && post._embedded['wp:featuredmedia']) {
           const featuredMedia = post._embedded['wp:featuredmedia'][0];
           if (featuredMedia.source_url) {
@@ -48,15 +43,43 @@ async function renderPosts() {
             img.style.height = '150px';
             img.style.objectFit = 'cover';
             img.style.display = 'flex';
-            img.style.paddingTop ="0.7rem";
+            img.style.paddingTop = '0.7rem';
             postElement.appendChild(img);
           }
         }
 
-        postElement.innerHTML += `
-          <p>${truncateText(post.content.rendered, 5)}</p>`;
-
+        postElement.innerHTML += `<p>${truncateText(post.content.rendered, 5)}</p>`;
         container.appendChild(postElement);
+      }
+    });
+
+    // Handle .card-mobile-view elements
+    const mobileViewContainers = document.querySelectorAll('.card-mobile-view');
+    mobileViewContainers.forEach((container, index) => {
+      if (index < posts.length) {
+        const post = posts[index];
+        const mobileViewElement = document.createElement('div');
+        mobileViewElement.classList.add('mobile-view-container');
+
+        if (post._embedded && post._embedded['wp:featuredmedia']) {
+          const featuredMedia = post._embedded['wp:featuredmedia'][0];
+          if (featuredMedia.source_url) {
+            const img = document.createElement('img');
+            img.src = featuredMedia.source_url;
+            img.alt = featuredMedia.alt_text || '';
+            img.style.maxWidth = '100%';
+            img.style.borderRadius=" 25px";
+            mobileViewElement.appendChild(img);
+          }
+        }
+
+        const titleElement = document.createElement('h1');
+
+      titleElement.textContent = post.title.rendered;
+      titleElement.classList.add('mobile-view-title');
+      mobileViewElement.appendChild(titleElement);
+
+container.appendChild(mobileViewElement);
       }
     });
   } catch (error) {
@@ -64,48 +87,22 @@ async function renderPosts() {
   }
 }
 
-
-renderPosts();
-
-const slider = document.querySelector(".slider");
-const rail = slider.querySelector(".slider-rail");
-const slideWidth = rail.offsetWidth; // Get the width of a single slide
-let currentPage = 0;
-
-function updateButtonState() {
-  const next = slider.querySelector("button.right-btn");
-  const previous = slider.querySelector("button.left-btn");
-  
-  // Enable or disable the "Next" button based on the current page
-  next.disabled = currentPage === rail.children.length - 1;
-  
-  // Enable or disable the "Previous" button based on the current page
-  previous.disabled = currentPage === 0;
-}
+// Carousel
+const slider = document.querySelector('.slider');
+const rail = slider.querySelector('.slider-rail');
+const previous = slider.querySelector('button.left-btn');
+const next = slider.querySelector('button.right-btn');
 
 function nextPage() {
-  if (currentPage < rail.children.length - 1) {
-    currentPage++;
-    const translateXValue = -currentPage * slideWidth;
-    rail.style.transform = `translateX(${translateXValue}px)`;
-    updateButtonState();
-  }
+  rail.style.transform = 'translateX(-100%)';
 }
 
 function previousPage() {
-  if (currentPage > 0) {
-    currentPage--;
-    const translateXValue = -currentPage * slideWidth;
-    rail.style.transform = `translateX(${translateXValue}px)`;
-    updateButtonState();
-  }
+  rail.style.transform = 'translateX(0)';
 }
 
-const next = slider.querySelector("button.right-btn");
-const previous = slider.querySelector("button.left-btn");
+next.addEventListener('click', nextPage);
+previous.addEventListener('click', previousPage);
 
-next.addEventListener("click", nextPage);
-previous.addEventListener("click", previousPage);
-
-// Initial button state setup
-updateButtonState();
+// Call the renderPosts function
+renderPosts();

@@ -26,7 +26,7 @@ async function renderPosts() {
   try {
     const posts = await getPosts();
     
-    // Handle .card elements (the ones in the slider)
+   
     const postContainers = document.querySelectorAll('.card');
     postContainers.forEach((container, index) => {
       if (index < posts.length) {
@@ -53,7 +53,7 @@ async function renderPosts() {
       }
     });
 
-    // Handle .card-mobile-view elements
+   
     const mobileViewContainers = document.querySelectorAll('.card-mobile-view');
     mobileViewContainers.forEach((container, index) => {
       if (index < posts.length) {
@@ -88,7 +88,7 @@ container.appendChild(mobileViewElement);
   }
 }
 
-// Carousel
+
 const slider = document.querySelector('.slider');
 const rail = slider.querySelector('.slider-rail');
 const previous = slider.querySelector('button.left-btn');
@@ -105,5 +105,5 @@ function previousPage() {
 next.addEventListener('click', nextPage);
 previous.addEventListener('click', previousPage);
 
-// Call the renderPosts function
+
 renderPosts();

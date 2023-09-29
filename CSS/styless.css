@@ -226,6 +226,33 @@ main{
 
 /* Home page */
 
+.grid-item1{
+    grid-template-columns: 1;
+
+}
+.grid-item2{
+    grid-template-columns: 2;
+}
+
+.home-page-flex{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.home-page-introduction-grid{
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    justify-content: center;
+
+
+}
+
+
 .main-img-div{
     display: grid;
     position: relative;
@@ -247,6 +274,7 @@ main{
   }  
 
   @media screen and (min-width:1016px) {
+    
 
     .main-img-div{
     padding-top: 0rem;

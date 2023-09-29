@@ -60,7 +60,10 @@ a:hover {
     
 }
 
-
+a:active,
+a:focus {
+    color: #706E6F;
+}
 
 h1,
 p,
@@ -791,24 +794,31 @@ div.product > *{
     animation: fadeIn 2s;
     text-align: center;
     color: var(--black);
-    te
+    
 
 }
 
 
 .about-us-image{
     align-self: center;
-    max-width: 80%;
+    max-width: 70%;
     object-fit: cover;
     opacity: 0;
     transform: translateY(-20px);
     animation: slideDown 1s ease-out 0.5s forwards; 
-    border-radius:25px;
+    border-radius:15px;
     margin-bottom: 3rem;
     
 }
 
+@media screen and (min-width:800px) {
 
+   
+   .content-about-us{
+    font-size: 20px;
+
+   }
+    }
 
 
    

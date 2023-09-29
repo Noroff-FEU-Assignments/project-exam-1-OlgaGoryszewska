@@ -243,13 +243,17 @@ main{
 
 
 .home-page-introduction-grid{
-    margin-top: 10rem;
+
+    margin-top: 7rem;
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
     justify-content: center;
 
 
+}
+.latest-post-h1{
+    padding: 1rem;
 }
 
 
@@ -774,11 +778,13 @@ div.product > *{
 .content-about-us{
     padding-right: 3rem;
     padding-left: 3rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', urbanist;
     font-size: 14px;
     font-weight: 400;
     animation: fadeIn 2s;
     text-align: center;
+    color: var(--black);
+    te
 
 }
 

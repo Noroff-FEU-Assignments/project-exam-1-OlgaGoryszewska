@@ -26,7 +26,7 @@ async function renderPosts() {
   try {
     const posts = await getPosts();
     
-
+    // Handle .card elements (the ones in the slider)
     const postContainers = document.querySelectorAll('.card');
     postContainers.forEach((container, index) => {
       if (index < posts.length) {
@@ -49,17 +49,11 @@ async function renderPosts() {
         }
 
         postElement.innerHTML += `<p>${truncateText(post.content.rendered, 5)}</p>`;
-
-        postElement.addEventListener('click', () => {
-          const blogPageUrl = `blog-specific-page.html?postId=${post.id}`
-          // Navigate to the specific blog page
-          window.location.href = blogPageUrl;
-        });
         container.appendChild(postElement);
       }
     });
 
-   
+    // Handle .card-mobile-view elements
     const mobileViewContainers = document.querySelectorAll('.card-mobile-view');
     mobileViewContainers.forEach((container, index) => {
       if (index < posts.length) {
@@ -77,14 +71,6 @@ async function renderPosts() {
             img.style.borderRadius=" 25px 25px 0px 0px";
 
             mobileViewElement.appendChild(img);
-
-            const readMoreLink = document.createElement("a");
-            readMoreLink.href = `blog-specific-page.html?id=${post.id}`;
-            readMoreLink.innerText = "Read More";
-            readMoreLink.style.textDecoration ="underline";
-            readMoreLink.style.fontWeight ="bold";
-            readMoreLink.style.paddingBottom= "2rem";
-            mobileViewContainer.appendChild(readMoreLink);
           }
         }
 
@@ -102,7 +88,7 @@ container.appendChild(mobileViewElement);
   }
 }
 
-
+// Carousel
 const slider = document.querySelector('.slider');
 const rail = slider.querySelector('.slider-rail');
 const previous = slider.querySelector('button.left-btn');
@@ -119,5 +105,5 @@ function previousPage() {
 next.addEventListener('click', nextPage);
 previous.addEventListener('click', previousPage);
 
-
+// Call the renderPosts function
 renderPosts();

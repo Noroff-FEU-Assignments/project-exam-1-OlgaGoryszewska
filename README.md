@@ -2,7 +2,7 @@
 
 A webpage for a hotel, featuring posts.
 
-![Project Ceylon House img](img/project-ceylons-house.jpg)
+![Project Ceylon House img](https://github.com/Noroff-FEU-Assignments/project-exam-1-OlgaGoryszewska/blob/main/IMG/project-ceylons-house.jpg)
 
 ## Description
 

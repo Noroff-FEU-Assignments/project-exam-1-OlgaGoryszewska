@@ -1,8 +1,8 @@
-# Rainy-Days
+# Ceylon's House
 
-A webpage with Rain Jackets for outdoors lovers
+A webpage for a hotel, featuring posts.
 
-![Project Ceylon House](../img/project-ceylons-house.jpg)
+![Project Ceylon House img](../img/project-ceylons-house.jpg)
 
 ## Description
 

@@ -2,7 +2,7 @@
 
 A webpage with Rain Jackets for outdoors lovers
 
-![alt-text-here](../img/project-ceylons-house.jpg)
+![Project Ceylon House](../img/project-ceylons-house.jpg)
 
 ## Description
 

@@ -8,6 +8,10 @@ A webpage for a hotel, featuring posts.
 
 In Project Exam 1, I employed HTML, CSS, and JavaScript to dynamically present a blog sourced from WordPress. Through a headless WordPress setup, I crafted a personalized frontend using Visual Studio Code, showcasing a blend of creativity and technical finesse in web development. Explore how this project highlights my skills in building modern, interactive, and seamlessly integrated web experiences.
 
+## Link to webpage
+
+https://www.ceylonshouse.no
+
 ## Figma File for design
 
 Link to Figma:

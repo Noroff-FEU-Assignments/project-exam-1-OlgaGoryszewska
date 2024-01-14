@@ -333,7 +333,7 @@ footer {
 .map {
   margin-left: auto;
   margin-right: auto;
-  padding: 2rem;
+  width: 100%;
 }
 
 .contact-form,

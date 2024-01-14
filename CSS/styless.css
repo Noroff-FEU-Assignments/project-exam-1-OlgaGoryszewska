@@ -330,6 +330,12 @@ footer {
 
 /* Contact form*/
 
+.map {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+}
+
 .contact-form,
 .blog-specific-page-container,
 .blog-page-container {
